@@ -1,0 +1,25 @@
+{
+  "name": "blackroad.company",
+  "org": "BlackRoad-OS-Inc",
+  "category": "corporate",
+  "title": "BlackRoad Company",
+  "deploy": {
+    "target": "gematria",
+    "path": "/var/www/blackroad/blackroad.company",
+    "ssl": "auto",
+    "cdn": true
+  },
+  "mirrors": {
+    "gitea": "https://git.blackroad.io/BlackRoad-OS-Inc/blackroad.company",
+    "github": "https://github.com/BlackRoad-OS-Inc/blackroad.company"
+  },
+  "ci": {
+    "on_push": ["build", "deploy"],
+    "on_pr": ["lint", "audit"]
+  },
+  "monitoring": {
+    "uptime": true,
+    "analytics": "roadanalytics",
+    "alerts": "nats"
+  }
+}
