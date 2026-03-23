@@ -5,57 +5,732 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>BlackRoad OS, Inc.</title>
-<meta name="description" content="Delaware C-Corp. Sovereign AI infrastructure.">
+<meta name="description" content="BlackRoad OS, Inc. — Delaware C-Corp. Sovereign infrastructure company.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<meta property="og:title" content="BlackRoad OS, Inc."><meta property="og:description" content="Delaware C-Corp. Sovereign AI infrastructure."><meta property="og:url" content="https://blackroad.company"><meta property="og:image" content="https://images.blackroad.io/brand/blackroad-og.png">
+<meta property="og:title" content="BlackRoad OS, Inc.">
+<meta property="og:description" content="Sovereign infrastructure company. Delaware C-Corp.">
+<meta property="og:url" content="https://blackroad.company">
+<meta property="og:image" content="https://images.blackroad.io/brand/blackroad-og.png">
 <link rel="canonical" href="https://blackroad.company">
-<style>*{margin:0;padding:0;box-sizing:border-box}
+<link rel="icon" type="image/png" href="https://images.blackroad.io/brand/favicon.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
-:root{--g:linear-gradient(90deg,#FF6B2B,#FF2255,#CC00AA,#8844FF,#4488FF,#00D4FF);--g135:linear-gradient(135deg,#FF6B2B,#FF2255,#CC00AA,#8844FF,#4488FF,#00D4FF);--bg:#000;--white:#fff;--black:#000;--border:#1a1a1a;--muted:#444;--sub:#737373;--sg:'Space Grotesk',sans-serif;--jb:'JetBrains Mono',monospace}
-body{background:var(--bg);color:var(--white);font-family:var(--sg);overflow-x:hidden}
+:root{
+  --g:linear-gradient(90deg,#FF6B2B,#FF2255,#CC00AA,#8844FF,#4488FF,#00D4FF);
+  --g135:linear-gradient(135deg,#FF6B2B,#FF2255,#CC00AA,#8844FF,#4488FF,#00D4FF);
+  --bg:#000;--border:#1a1a1a;--sub:#999;--dim:#333;
+  --sg:'Space Grotesk',sans-serif;--jb:'JetBrains Mono',monospace
+}
+body{background:var(--bg);color:#f5f5f5;font-family:var(--sg);overflow-x:hidden;padding-bottom:48px;-webkit-tap-highlight-color:transparent}
 .grad-bar{height:4px;background:var(--g)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-bottom:1px solid var(--border)}
-.nav-logo{font-weight:700;font-size:20px;color:var(--white);display:flex;align-items:center;gap:10px}
-.nav-mark{width:28px;height:4px;border-radius:2px;background:var(--g)}
-.nav-links{display:flex;gap:24px}
-.nav-links a{font-size:13px;font-weight:500;color:var(--white);opacity:.4;text-decoration:none;transition:opacity .15s}
-.nav-links a:hover{opacity:.8}
-.container{max-width:900px;margin:0 auto;padding:32px 24px}
-h1{font-size:32px;font-weight:700;margin-bottom:8px}
-.sub{font-size:14px;color:var(--sub);margin-bottom:32px}
-.card{border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:16px;background:#0a0a0a;transition:border-color .2s}
-.card:hover{border-color:#333}
-.card h3{font-size:16px;font-weight:600;margin-bottom:8px}
-.card p{font-size:13px;color:var(--sub);line-height:1.6}
-.input{width:100%;padding:12px 14px;background:#111;border:1px solid var(--border);border-radius:6px;color:#f5f5f5;font-size:14px;font-family:var(--sg);outline:none}
-.input:focus{border-color:#333}
-.btn{padding:10px 24px;border:none;border-radius:6px;background:#f5f5f5;color:#000;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sg)}
-.btn-outline{background:transparent;color:#f5f5f5;border:1px solid var(--border)}
-.stat{text-align:center;padding:16px}
-.stat-val{font-size:28px;font-weight:700}
-.stat-label{font-family:var(--jb);font-size:10px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
-.mono{font-family:var(--jb);font-size:12px}
-.label{font-family:var(--jb);font-size:10px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-.dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
-.dot-up{background:var(--g135)}
-.dot-down{background:none;border:1px solid var(--white);opacity:.3}
-canvas{border:1px solid var(--border);border-radius:10px;background:#0a0a0a}
-footer{border-top:1px solid var(--border);padding:24px 48px;text-align:center;font-size:12px;color:var(--sub)}
-footer a{color:var(--white);opacity:.5;text-decoration:none}
-.grad-bar-bottom{height:4px;background:var(--g)}
-pre{background:#0a0a0a;border:1px solid var(--border);border-radius:8px;padding:16px;font-family:var(--jb);font-size:12px;color:#888;overflow-x:auto;line-height:1.6}
-@media(max-width:768px){nav{padding:14px 20px}.container{padding:24px 16px}.grid-4,.grid-3{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}h1{font-size:24px}}</style>
+
+/* ═══ MOBILE-FIRST LAYOUT ═══ */
+.container{max-width:100%;margin:0 auto;padding:32px 16px 0}
+.section{margin-bottom:40px}
+.section-label{font-family:var(--jb);font-size:10px;font-weight:500;color:var(--sub);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+
+/* company header */
+.company-name{font-size:24px;font-weight:700;color:#fff;margin-bottom:4px}
+.company-sub{font-size:13px;color:#aaa;margin-bottom:32px;line-height:1.6}
+.mark{width:24px;height:3px;border-radius:2px;background:var(--g);margin-bottom:16px}
+
+/* cards — clickable */
+.card{border:1px solid var(--border);border-radius:10px;padding:16px;background:#0a0a0a;transition:border-color .2s,transform .15s;margin-bottom:10px;cursor:pointer;-webkit-user-select:none;user-select:none}
+.card:hover{border-color:var(--dim)}
+.card:active{transform:scale(.985)}
+.card.no-click{cursor:default}
+.card.no-click:active{transform:none}
+
+/* expandable detail inside cards */
+.card-detail{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px;color:#aaa;line-height:1.7}
+.card.open .card-detail{display:block}
+.card-arrow{float:right;font-size:14px;color:#555;transition:transform .2s}
+.card.open .card-arrow{transform:rotate(90deg)}
+
+/* grids — mobile: stack, tablet: 2col, desktop: full */
+.grid-2,.grid-3,.grid-4{display:grid;gap:10px;margin-bottom:16px}
+.grid-2{grid-template-columns:1fr}
+.grid-3{grid-template-columns:1fr}
+.grid-4{grid-template-columns:repeat(2,1fr)}
+
+/* stats */
+.stat-val{font-size:22px;font-weight:700;color:#fff}
+.stat-label{font-family:var(--jb);font-size:9px;color:#aaa;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.stat-sub{font-family:var(--jb);font-size:10px;color:#777;margin-top:6px}
+
+/* dots */
+.dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:6px;flex-shrink:0}
+.dot-live{background:var(--g135)}
+.dot-off{border:1px solid #888;width:5px;height:5px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.pulse{animation:pulse 2s infinite}
+.circle-accent{width:8px;height:8px;border-radius:50%;background:var(--g135);display:inline-block}
+
+/* org rows */
+.org-item{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.org-item:last-child{border-bottom:none}
+.org-item:active{background:#111}
+.org-name{font-size:13px;font-weight:500;color:#ddd;flex:1;text-decoration:none}
+.org-tag{font-family:var(--jb);font-size:9px;color:#aaa;letter-spacing:.06em;text-transform:uppercase}
+.org-count{font-family:var(--jb);font-size:10px;color:#777}
+.org-arrow{font-size:13px;color:#555;transition:transform .2s;margin-left:4px}
+.org-item.open .org-arrow{transform:rotate(90deg)}
+.org-repos{display:none;padding:8px 0 4px 22px;border-bottom:1px solid var(--border)}
+.org-item.open+.org-repos{display:block}
+.org-repo{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #111;cursor:pointer;transition:background .15s;text-decoration:none}
+.org-repo:last-child{border-bottom:none}
+.org-repo:hover{background:#0d0d0d}
+.org-repo-name{font-size:12px;color:#ccc;flex:1}
+.org-repo-desc{font-size:10px;color:#666;flex:2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.org-repo-lang{font-family:var(--jb);font-size:9px;color:#888}
+.org-repo-stars{font-family:var(--jb);font-size:9px;color:#888}
+.org-loading{font-family:var(--jb);font-size:10px;color:#555;padding:8px 0}
+.org-search-wrap{margin-bottom:12px}
+.org-search{width:100%;padding:10px 14px;background:#0a0a0a;border:1px solid var(--border);border-radius:8px;color:#ddd;font-size:13px;font-family:var(--sg);outline:none;transition:border-color .2s}
+.org-search:focus{border-color:#333}
+.org-search::placeholder{color:#555}
+.org-search-result{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;margin-bottom:6px;text-decoration:none;transition:border-color .2s;cursor:pointer}
+.org-search-result:hover{border-color:#333}
+.org-search-result-org{font-family:var(--jb);font-size:9px;color:#666;min-width:100px}
+.org-search-result-name{font-size:12px;color:#ddd;font-weight:500}
+.org-search-result-desc{font-size:10px;color:#888;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* domain grid */
+.domain-grid{display:grid;grid-template-columns:1fr;gap:8px}
+.domain-item{font-size:12px;color:#bbb;padding:10px 14px;border:1px solid var(--border);border-radius:6px;transition:border-color .2s,background .15s;text-decoration:none;display:flex;align-items:center;gap:8px}
+.domain-item:hover{border-color:var(--dim);color:#eee}
+.domain-item:active{background:#111}
+.domain-dot{width:4px;height:4px;border-radius:50%;background:var(--g135);flex-shrink:0}
+
+/* filing rows — clickable */
+.filing-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;transition:background .15s}
+.filing-row:last-child{border-bottom:none}
+.filing-row:active{background:#111}
+.filing-key{color:#aaa}
+.filing-val{color:#ddd;text-align:right}
+
+/* fleet rows */
+.fleet-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.fleet-row:last-child{border-bottom:none}
+.fleet-row:active{background:#111}
+.fleet-name{font-size:13px;font-weight:500;color:#ddd;min-width:70px}
+.fleet-ip{font-family:var(--jb);font-size:10px;color:#999;min-width:40px}
+.fleet-role{font-size:11px;color:#888;flex:1}
+.fleet-detail{display:none;padding:12px 0 4px 22px;font-size:11px;color:#999;line-height:1.8;border-bottom:1px solid var(--border)}
+
+/* stack rows */
+.stack-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:13px;cursor:pointer;transition:background .15s}
+.stack-row:last-child{border-bottom:none}
+.stack-row:active{background:#111}
+.stack-key{color:#aaa;display:flex;align-items:center;gap:8px}
+.stack-val{color:#ddd;text-align:right;font-family:var(--jb);font-size:11px}
+.stack-detail{display:none;padding:8px 0 8px 20px;font-size:11px;color:#999;line-height:1.8;border-bottom:1px solid var(--border)}
+
+/* ═══ WIDGET GRID ═══ */
+.widget-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+.widget{border:1px solid var(--border);border-radius:12px;padding:16px;background:#0a0a0a;cursor:grab;transition:border-color .2s,transform .15s,box-shadow .2s;position:relative;min-height:90px;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none}
+.widget:hover{border-color:var(--dim)}
+.widget:active{cursor:grabbing;transform:scale(.97)}
+.widget.dragging{opacity:.5;border-color:#444;box-shadow:0 0 20px rgba(136,68,255,.15)}
+.widget.drag-over{border-color:#888;background:#111}
+.widget-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:10px;background:#111;border:1px solid var(--border)}
+.widget-icon.grad{background:var(--g135);border:none}
+.widget-name{font-size:12px;font-weight:600;color:#ddd;margin-bottom:2px}
+.widget-desc{font-family:var(--jb);font-size:9px;color:#888;line-height:1.4}
+.widget-link{position:absolute;inset:0;border-radius:12px;z-index:1}
+.widget-badge{position:absolute;top:8px;right:8px;font-family:var(--jb);font-size:8px;color:#666;background:#111;border:1px solid var(--border);border-radius:4px;padding:1px 5px}
+.widget-add{border:1px dashed #333;background:transparent;display:flex;align-items:center;justify-content:center;min-height:90px;cursor:pointer;border-radius:12px;transition:border-color .2s}
+.widget-add:hover{border-color:#555}
+.widget-add-icon{font-size:20px;color:#444}
+.widget-palette{display:none;border:1px solid var(--border);border-radius:12px;background:#0a0a0a;padding:16px;margin-bottom:16px}
+.widget-palette.open{display:block}
+.widget-palette-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+.widget-palette-item{border:1px solid var(--border);border-radius:8px;padding:10px;cursor:pointer;transition:border-color .2s;font-size:11px;color:#aaa}
+.widget-palette-item:hover{border-color:#555;color:#ddd}
+.widget-edit-mode .widget{animation:wiggle .3s ease-in-out infinite alternate}
+.widget-edit-mode .widget:nth-child(2n){animation-delay:.15s}
+@keyframes wiggle{0%{transform:rotate(-.5deg)}100%{transform:rotate(.5deg)}}
+.widget-remove{display:none;position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:#333;border:1px solid #555;color:#aaa;font-size:11px;cursor:pointer;z-index:2;align-items:center;justify-content:center;line-height:1}
+.widget-edit-mode .widget-remove{display:flex}
+
+/* ═══ TABLET+ ═══ */
+@media(min-width:600px){
+  .container{padding:40px 24px 0;max-width:880px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .domain-grid{grid-template-columns:repeat(2,1fr)}
+  .widget-grid{grid-template-columns:repeat(3,1fr)}
+  .widget-palette-grid{grid-template-columns:repeat(3,1fr)}
+  .company-name{font-size:28px}
+}
+
+/* ═══ DESKTOP ═══ */
+@media(min-width:900px){
+  .container{padding:48px 24px 0}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .domain-grid{grid-template-columns:repeat(3,1fr)}
+  .widget-grid{grid-template-columns:repeat(4,1fr)}
+  .widget-palette-grid{grid-template-columns:repeat(4,1fr)}
+  .section{margin-bottom:48px}
+  .company-name{font-size:32px}
+}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
 </head>
 <body>
 <div class="grad-bar"></div>
-<nav><div class="nav-logo"><div class="nav-mark"></div> BlackRoad OS, Inc.</div><div class="nav-links"><a href="https://blackroad.io">Home</a><a href="https://chat.blackroad.io">Chat</a><a href="https://search.blackroad.io">Search</a></div></nav>
-<div class="container"><h1>BlackRoad OS, Inc.</h1><p class="sub">Delaware C-Corp. Nov 17, 2025. Alexa Louise Amundson, CEO.</p><div class="grid-4" id="kp"><div class="stat"><div class="stat-val" id="kr">-</div><div class="stat-label">Repos</div></div><div class="stat"><div class="stat-val" id="kw">-</div><div class="stat-label">Workers</div></div><div class="stat"><div class="stat-val" id="kd">-</div><div class="stat-label">Domains</div></div><div class="stat"><div class="stat-val" id="ks">-</div><div class="stat-label">Services</div></div></div><div class="label">Products</div><div class="grid-3"><a href="https://chat.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>Chat</h3><p>109 AI agents. Voice.</p></a><a href="https://search.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>Search</h3><p>2,362 pages. AI answers.</p></a><a href="https://pay.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>Pay</h3><p>Stripe billing. 3 plans.</p></a><a href="https://auth.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>Auth</h3><p>JWT. D1 users.</p></a><a href="https://social.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>Social</h3><p>No ads. No algorithm.</p></a><a href="https://roundtrip.blackroad.io" class="card" style="text-decoration:none;color:#f5f5f5"><h3>RoundTrip</h3><p>Agent hub.</p></a></div><div class="label" style="margin-top:24px">Fleet</div><div class="grid-3" id="fn"></div><div class="card" style="margin-top:24px"><div class="label">Company</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:#888"><div>Delaware C-Corp</div><div>EIN: 41-2663817</div><div>Formed: Nov 17, 2025</div><div>Infra: $38/mo</div><div>Compute: 52 TOPS</div><div>Founder: Alexa Amundson</div></div></div></div><script>async function lk(){try{var r=await fetch("https://stats-blackroad.amundsonalexa.workers.dev/ecosystem");var d=(await r.json()).data||{};document.getElementById("kr").textContent=d.repos||"-";document.getElementById("kw").textContent=d.workers||"-";document.getElementById("kd").textContent=d.domains||"-";document.getElementById("ks").textContent=d.services||"-"}catch(e){}}async function lf(){try{var r=await fetch("https://fleet-api.amundsonalexa.workers.dev/fleet");var d=await r.json();document.getElementById("fn").innerHTML=["alice","cecilia","octavia","aria","lucidia"].map(function(n){var nd=d.nodes[n]||{};var u=nd.status==="online";return'<div class="card"><span class="dot '+(u?"dot-up":"dot-down")+'"></span><span style="font-weight:600;text-transform:capitalize">'+n+"</span>"+(u?"<div class=\"mono\" style=\"color:#666;margin-top:4px\">"+nd.temp+"C | "+Math.round((nd.ram_used||0)/(nd.ram_total||1)*100)+"%</div>":"")+"</div>"}).join("")}catch(e){}}lk();lf();setInterval(lk,60000);setInterval(lf,30000)</script>
-<footer>&copy; 2026 <a href="https://blackroad.io">BlackRoad OS, Inc.</a></footer>
-<div class="grad-bar-bottom"></div>
-<div style="position:fixed;bottom:0;left:0;right:0;z-index:999;background:#0a0a0a;border-top:1px solid #1a1a1a;padding:8px 0"><div style="display:flex;gap:16px;justify-content:center;padding:0 20px;white-space:nowrap"><a href="https://blackroad.io" style="font-family:var(--jb);font-size:.6rem;color:#555;text-decoration:none">Home</a><a href="https://search.blackroad.io" style="font-family:var(--jb);font-size:.6rem;color:#555;text-decoration:none">Search</a><a href="https://chat.blackroad.io" style="font-family:var(--jb);font-size:.6rem;color:#555;text-decoration:none">Chat</a><a href="https://pay.blackroad.io" style="font-family:var(--jb);font-size:.6rem;color:#555;text-decoration:none">Pay</a><a href="https://github.com/BlackRoad-OS-Inc" style="font-family:var(--jb);font-size:.6rem;color:#555;text-decoration:none">GitHub</a></div></div><div style="height:36px"></div>
-</body></html>
+
+<div class="container">
+
+  <!-- Company header -->
+  <div class="section">
+    <div class="mark"></div>
+    <div class="company-name">BlackRoad OS, Inc.</div>
+    <div class="company-sub">Delaware C-Corp  ·  Founded November 2025  ·  Sovereign infrastructure</div>
+  </div>
+
+  <!-- Live stats -->
+  <div class="section">
+    <div class="section-label">Live</div>
+    <div class="grid-4">
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val" id="s-nodes">7</div>
+        <div class="stat-label">Nodes</div>
+        <div class="card-detail">5 Raspberry Pi 5 boards on local network + 2 DigitalOcean droplets (NYC). All connected via WireGuard mesh VPN.</div>
+      </div>
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val" id="s-domains">20</div>
+        <div class="stat-label">Domains</div>
+        <div class="card-detail">20 root domains across .io, .com, .us, .earth, .studio, .shop, .store, .info, .net TLDs. All on Cloudflare DNS with self-hosted fallback via PowerDNS.</div>
+      </div>
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val" id="s-repos">383</div>
+        <div class="stat-label">Repos</div>
+        <div class="card-detail">Across 18 GitHub organizations + self-hosted Gitea instance. Gitea is primary, GitHub is mirror. Includes 12 forked open-source deps with road-themed names.</div>
+      </div>
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val" id="s-orgs">18</div>
+        <div class="stat-label">GitHub Orgs</div>
+        <div class="card-detail">Organized by vertical: AI, Labs, Cloud, Security, Studio, Interactive, Media, Education, Hardware, Gov, Foundation, Ventures, Archive, Enterprise, README.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="section">
+    <div class="section-label">About</div>
+    <div class="card" onclick="toggle(this)">
+      <span class="card-arrow">›</span>
+      <p style="font-size:13px;color:#ccc;line-height:1.8">
+        BlackRoad builds sovereign compute infrastructure that runs on hardware you own.
+        Five Raspberry Pi 5 boards, two Hailo-8 accelerators (52 TOPS), two cloud droplets,
+        one WireGuard mesh.
+      </p>
+      <div class="card-detail">
+        No vendor lock-in. No SaaS dependencies. Everything self-hosted — Git (Gitea), AI inference (Ollama on 4 nodes), DNS (PowerDNS), object storage (MinIO), TLS (Caddy + Let's Encrypt), chat (RoundTrip), CI/CD (Gitea Actions), database (PostgreSQL on 3 nodes), cache (Redis).<br><br>
+        The only external dependencies are Stripe (payment processing) and GoDaddy (domain registrar). Everything else runs on owned hardware or rented compute with full root access.
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate -->
+  <div class="section">
+    <div class="section-label">Corporate</div>
+    <div class="card no-click" id="corp-card"></div>
+  </div>
+
+  <!-- Infrastructure -->
+  <div class="section">
+    <div class="section-label">Infrastructure</div>
+    <div class="grid-3">
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val">52</div>
+        <div class="stat-label">TOPS AI Compute</div>
+        <div class="card-detail">2x Hailo-8 accelerators (26 TOPS each) on Cecilia and Octavia. Used for real-time object detection, inference acceleration, and edge AI workloads.</div>
+      </div>
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val">5</div>
+        <div class="stat-label">Pi 5 Nodes</div>
+        <div class="card-detail">Alice (.49), Cecilia (.96), Octavia (.101), Aria (.98), Lucidia (.38). Each has a specific role in the fleet — gateway, inference, Git, networking, DNS.</div>
+      </div>
+      <div class="card" onclick="toggle(this)">
+        <span class="card-arrow">›</span>
+        <div class="stat-val">2</div>
+        <div class="stat-label">Cloud Droplets</div>
+        <div class="card-detail">Gematria (NYC3) — Caddy TLS edge, PowerDNS ns1, Ollama with 6 models. Anastasia (NYC1) — general compute. Both on DigitalOcean.</div>
+      </div>
+    </div>
+
+    <div class="card no-click">
+      <div class="section-label" style="margin-bottom:12px">Fleet Status</div>
+      <div id="fleet-list"></div>
+    </div>
+  </div>
+
+  <!-- GitHub Organizations -->
+  <div class="section">
+    <div class="section-label">GitHub Organizations</div>
+    <div class="org-search-wrap">
+      <input class="org-search" id="org-search" placeholder="Search all repos across all orgs..." oninput="filterRepos()">
+    </div>
+    <div id="org-search-results" style="display:none;margin-bottom:16px"></div>
+    <div class="card no-click" id="orgs-card"></div>
+  </div>
+
+  <!-- Domain Portfolio -->
+  <div class="section">
+    <div class="section-label">Domain Portfolio</div>
+    <div class="domain-grid" id="domains-grid"></div>
+  </div>
+
+  <!-- Sovereignty Stack -->
+  <div class="section">
+    <div class="section-label">Sovereignty Stack</div>
+    <div class="card no-click" id="stack-card"></div>
+  </div>
+
+  <!-- Contact -->
+  <div class="section">
+    <div class="section-label">Contact</div>
+    <div class="card no-click" id="contact-card"></div>
+  </div>
+
+  <!-- Widget Grid -->
+  <div class="section">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div class="section-label" style="margin-bottom:0">Apps & Tools</div>
+      <button onclick="toggleEditMode()" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-family:var(--jb);font-size:9px;color:#888;cursor:pointer" id="edit-btn">Edit</button>
+    </div>
+    <div class="widget-palette" id="widget-palette">
+      <div style="font-size:12px;color:#aaa;margin-bottom:4px">Add a widget</div>
+      <div class="widget-palette-grid" id="palette-grid"></div>
+    </div>
+    <div class="widget-grid" id="widget-grid"></div>
+  </div>
+
+  <!-- Uptime -->
+  <div class="section" style="text-align:center">
+    <span style="font-size:11px;color:#aaa"><span class="circle-accent pulse"></span>&nbsp; Company uptime: <span id="uptime">calculating...</span></span>
+  </div>
+
+<div class="grad-bar" style="margin-top:48px"></div>
+
+
+<script>
+// Toggle expandable cards
+function toggle(el){
+  if(el.classList.contains('no-click'))return;
+  el.classList.toggle('open');
+}
+
+// Corporate filings — all clickable rows
+var corp = [
+  {k:'Entity', v:'BlackRoad OS, Inc.', detail:'Parent corporation for all BlackRoad products, services, and intellectual property.'},
+  {k:'Type', v:'Delaware C-Corporation', detail:'Standard Delaware C-Corp structure. Chosen for venture compatibility, clean cap table, and Stripe Atlas formation.'},
+  {k:'Incorporated', v:'November 17, 2025', detail:'Filed through Stripe Atlas. Certificate of Incorporation, Bylaws, 83(b) election, EIN assignment all completed at formation.'},
+  {k:'Formation', v:'Stripe Atlas', detail:'Stripe Atlas handles registered agent, EIN application, stock issuance, and banking setup.'},
+  {k:'Registered Agent', v:'Legalinc Corporate Services Inc.', detail:'Delaware registered agent for service of process. Located in Wilmington, DE.'},
+  {k:'Shares Authorized', v:'10,000,000 Common', detail:'10 million shares of Common Stock authorized at $0.00001 par value. Standard founder allocation.'},
+  {k:'Par Value', v:'$0.00001', detail:'Minimum par value per share. Total authorized capital: $100.'},
+  {k:'File Number', v:'10405914', detail:'Delaware Division of Corporations file number.'},
+  {k:'EIN', v:'41-2663817', detail:'Federal Employer Identification Number. IRS Form SS-4 filed at incorporation.'},
+  {k:'Founder / CEO', v:'Alexa Louise Amundson', detail:'Sole founder, sole director, CEO. 100% ownership.'}
+];
+
+document.getElementById('corp-card').innerHTML = corp.map(function(r){
+  return '<div class="filing-row" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'block\'?\'none\':\'block\'">' +
+    '<span class="filing-key">'+r.k+'</span><span class="filing-val">'+r.v+'</span></div>' +
+    '<div style="display:none;padding:8px 0 12px;font-size:11px;color:#999;line-height:1.7;border-bottom:1px solid #1a1a1a">'+r.detail+'</div>';
+}).join('');
+
+// Fleet
+var fleet = [
+  {name:'Alice', ip:'.49', role:'Gateway / Pi-hole / PostgreSQL / Qdrant', detail:'Primary gateway node. Runs Pi-hole DNS, PostgreSQL database, Qdrant vector store, Redis cache. nginx reverse proxy for 37 sites.', up:true},
+  {name:'Cecilia', ip:'.96', role:'Ollama / MinIO / Hailo-8', detail:'AI inference node. Ollama with 16 models loaded. MinIO object storage (4 buckets, 120MB). Hailo-8 accelerator (26 TOPS). PostgreSQL, InfluxDB.', up:true},
+  {name:'Octavia', ip:'.101', role:'Gitea / Workers / NATS / Docker', detail:'DevOps node. Gitea git server (:3100). 15 self-hosted Workers (:9001-9015). NATS messaging. Docker Swarm orchestration. PaaS deploy API (:3500).', up:true},
+  {name:'Aria', ip:'.98', role:'Headscale / Cloudflared / nginx', detail:'Networking node. Headscale coordination server. Cloudflare tunnels. nginx. 19 services running.', up:true},
+  {name:'Lucidia', ip:'.38', role:'PowerDNS / Runners / Ollama', detail:'DNS + CI node. PowerDNS authoritative server. GitHub Actions self-hosted runners. Ollama inference. 334 web apps via nginx. SD card degrading — backup done.', up:true},
+  {name:'Gematria', ip:'nyc3', role:'Caddy TLS / PowerDNS / Ollama', detail:'Cloud edge node (DigitalOcean NYC3). Caddy reverse proxy with Let\'s Encrypt for 151 domains. PowerDNS ns1. Ollama with 6 models.', up:true},
+  {name:'Anastasia', ip:'nyc1', role:'Compute Droplet', detail:'General compute (DigitalOcean NYC1). Available for burst workloads and edge caching.', up:true}
+];
+
+document.getElementById('fleet-list').innerHTML = fleet.map(function(n){
+  return '<div class="fleet-row" onclick="var d=this.nextElementSibling;d.style.display=d.style.display===\'block\'?\'none\':\'block\'">' +
+    '<span class="dot '+(n.up?'dot-live pulse':'dot-off')+'"></span>' +
+    '<span class="fleet-name">'+n.name+'</span>' +
+    '<span class="fleet-ip">'+n.ip+'</span>' +
+    '<span class="fleet-role">'+n.role+'</span>' +
+    '</div><div class="fleet-detail">'+n.detail+'</div>';
+}).join('');
+
+// GitHub Orgs — live data
+var orgs = [
+  {name:'BlackRoad-OS-Inc', tag:'Parent'},
+  {name:'BlackRoad-AI', tag:'AI / Models'},
+  {name:'BlackRoad-Labs', tag:'Research'},
+  {name:'BlackRoad-Cloud', tag:'Cloud Infra'},
+  {name:'BlackRoad-Security', tag:'Security'},
+  {name:'BlackRoad-Studio', tag:'Creative'},
+  {name:'BlackRoad-Interactive', tag:'Interactive'},
+  {name:'BlackRoad-Media', tag:'Media'},
+  {name:'BlackRoad-Education', tag:'Education'},
+  {name:'BlackRoad-Hardware', tag:'Hardware'},
+  {name:'BlackRoad-Gov', tag:'Government'},
+  {name:'BlackRoad-Foundation', tag:'Foundation'},
+  {name:'BlackRoad-Ventures', tag:'Ventures'},
+  {name:'BlackRoad-Archive', tag:'Archive'},
+  {name:'Blackbox-Enterprises', tag:'Enterprise'},
+  {name:'BlackRoad-README', tag:'Docs'}
+];
+
+var orgRepoCache = {};
+var allRepos = [];
+
+// Render org list
+function renderOrgs(){
+  document.getElementById('orgs-card').innerHTML = orgs.map(function(o,i){
+    var count = orgRepoCache[o.name] ? orgRepoCache[o.name].length : '...';
+    return '<div class="org-item" onclick="toggleOrg('+i+')" id="org-'+i+'">' +
+      '<span class="dot dot-live"></span>' +
+      '<span class="org-name">'+o.name+'</span>' +
+      '<span class="org-count" id="org-count-'+i+'">'+count+'</span>' +
+      '<span class="org-tag">'+o.tag+'</span>' +
+      '<span class="org-arrow">›</span>' +
+      '</div>' +
+      '<div class="org-repos" id="org-repos-'+i+'"><div class="org-loading">Loading...</div></div>';
+  }).join('');
+}
+renderOrgs();
+
+// Fetch repos for one org
+async function fetchOrgRepos(orgName){
+  if(orgRepoCache[orgName]) return orgRepoCache[orgName];
+  var allR = [];
+  var page = 1;
+  try {
+    while(true){
+      var r = await fetch('https://api.github.com/orgs/'+orgName+'/repos?per_page=100&sort=updated&page='+page);
+      if(!r.ok) break;
+      var data = await r.json();
+      if(!data.length) break;
+      allR = allR.concat(data);
+      if(data.length < 100) break;
+      page++;
+    }
+  } catch(e){}
+  orgRepoCache[orgName] = allR;
+  return allR;
+}
+
+// Toggle org expand
+async function toggleOrg(i){
+  var el = document.getElementById('org-'+i);
+  var panel = document.getElementById('org-repos-'+i);
+  var wasOpen = el.classList.contains('open');
+  // close all
+  document.querySelectorAll('.org-item.open').forEach(function(x){x.classList.remove('open')});
+  document.querySelectorAll('.org-repos').forEach(function(x){x.style.display='none'});
+  if(wasOpen) return;
+  el.classList.add('open');
+  panel.style.display = 'block';
+  panel.innerHTML = '<div class="org-loading">Fetching from GitHub...</div>';
+  var repos = await fetchOrgRepos(orgs[i].name);
+  document.getElementById('org-count-'+i).textContent = repos.length;
+  if(!repos.length){
+    panel.innerHTML = '<div class="org-loading">No public repos found</div>';
+    return;
+  }
+  var searchId = 'org-repo-search-'+i;
+  panel.innerHTML = '<input class="org-search" id="'+searchId+'" placeholder="Search '+orgs[i].name+' repos..." oninput="filterOrgRepos('+i+')" style="margin:4px 0 8px;padding:8px 10px;font-size:11px">' +
+    '<div id="org-repo-list-'+i+'">' + renderRepoList(repos, orgs[i].name) + '</div>';
+}
+
+// Render repo list HTML
+function renderRepoList(repos, orgName){
+  return repos.map(function(r){
+    var lang = r.language || '';
+    var stars = r.stargazers_count || 0;
+    var desc = r.description || '';
+    if(desc.length > 80) desc = desc.slice(0,77)+'...';
+    return '<a href="'+r.html_url+'" target="_blank" class="org-repo">' +
+      '<span class="org-repo-name">'+r.name+'</span>' +
+      '<span class="org-repo-desc">'+desc+'</span>' +
+      (lang ? '<span class="org-repo-lang">'+lang+'</span>' : '') +
+      (stars ? '<span class="org-repo-stars">★ '+stars+'</span>' : '') +
+      '</a>';
+  }).join('');
+}
+
+// Filter within one org
+function filterOrgRepos(i){
+  var q = document.getElementById('org-repo-search-'+i).value.toLowerCase();
+  var repos = orgRepoCache[orgs[i].name] || [];
+  var filtered = repos.filter(function(r){
+    return r.name.toLowerCase().includes(q) || (r.description||'').toLowerCase().includes(q) || (r.language||'').toLowerCase().includes(q);
+  });
+  document.getElementById('org-repo-list-'+i).innerHTML = renderRepoList(filtered, orgs[i].name) || '<div class="org-loading">No matches</div>';
+}
+
+// Global search across ALL orgs
+var globalSearchTimeout;
+function filterRepos(){
+  var q = document.getElementById('org-search').value.toLowerCase().trim();
+  var results = document.getElementById('org-search-results');
+  if(!q || q.length < 2){ results.style.display='none'; return; }
+  clearTimeout(globalSearchTimeout);
+  globalSearchTimeout = setTimeout(async function(){
+    results.style.display='block';
+    results.innerHTML='<div class="org-loading">Searching all orgs...</div>';
+    // fetch all orgs we haven't fetched yet
+    var promises = orgs.map(function(o){ return fetchOrgRepos(o.name); });
+    await Promise.all(promises);
+    // search across everything
+    var matches = [];
+    orgs.forEach(function(o){
+      var repos = orgRepoCache[o.name] || [];
+      repos.forEach(function(r){
+        if(r.name.toLowerCase().includes(q) || (r.description||'').toLowerCase().includes(q) || (r.language||'').toLowerCase().includes(q)){
+          matches.push({repo:r, org:o.name});
+        }
+      });
+    });
+    // update total repo count
+    var totalRepos = 0;
+    orgs.forEach(function(o){ totalRepos += (orgRepoCache[o.name]||[]).length; });
+    document.getElementById('s-repos').textContent = totalRepos;
+    if(!matches.length){
+      results.innerHTML='<div class="org-loading">No repos matching "'+q+'"</div>';
+      return;
+    }
+    results.innerHTML = '<div style="font-family:var(--jb);font-size:9px;color:#666;margin-bottom:8px;letter-spacing:.08em;text-transform:uppercase">'+matches.length+' results across '+orgs.length+' orgs ('+totalRepos+' total repos)</div>' +
+      matches.slice(0,50).map(function(m){
+        var desc = m.repo.description||'';
+        if(desc.length>60) desc=desc.slice(0,57)+'...';
+        return '<a href="'+m.repo.html_url+'" target="_blank" class="org-search-result">' +
+          '<span class="org-search-result-org">'+m.org+'</span>' +
+          '<span class="org-search-result-name">'+m.repo.name+'</span>' +
+          '<span class="org-search-result-desc">'+desc+'</span>' +
+          (m.repo.language?'<span class="org-repo-lang">'+m.repo.language+'</span>':'') +
+          '</a>';
+      }).join('') +
+      (matches.length>50?'<div class="org-loading">...and '+(matches.length-50)+' more</div>':'');
+    // also update all org counts
+    renderOrgs();
+  }, 300);
+}
+
+// Pre-fetch all org counts on load (lightweight, parallel)
+(async function(){
+  for(var i=0;i<orgs.length;i++){
+    fetchOrgRepos(orgs[i].name).then(function(repos){
+      // update counts as they come in
+      orgs.forEach(function(o,j){
+        if(orgRepoCache[o.name]){
+          var el=document.getElementById('org-count-'+j);
+          if(el) el.textContent=orgRepoCache[o.name].length;
+        }
+      });
+      // update total
+      var total=0;
+      orgs.forEach(function(o){total+=(orgRepoCache[o.name]||[]).length;});
+      if(total>0) document.getElementById('s-repos').textContent=total;
+    });
+  }
+})();
+
+// Domains
+var domains = [
+  {d:'blackroad.io', label:'Primary'},
+  {d:'blackroad.company', label:'Corporate'},
+  {d:'blackroad.me', label:'Identity'},
+  {d:'blackroad.network', label:'Mesh'},
+  {d:'blackroad.systems', label:'Fleet'},
+  {d:'blackroadai.com', label:'AI'},
+  {d:'blackroadinc.us', label:'US Entity'},
+  {d:'blackroadqi.com', label:'Quantum'},
+  {d:'blackroadquantum.com', label:'Quantum'},
+  {d:'blackroadquantum.info', label:'Quantum'},
+  {d:'blackroadquantum.net', label:'Quantum'},
+  {d:'blackroadquantum.shop', label:'Shop'},
+  {d:'blackroadquantum.store', label:'Store'},
+  {d:'lucidia.earth', label:'Lucidia'},
+  {d:'lucidia.studio', label:'Studio'},
+  {d:'lucidiaqi.com', label:'Lucidia QI'},
+  {d:'roadchain.io', label:'Chain'},
+  {d:'roadcoin.io', label:'Coin'},
+  {d:'blackboxprogramming.io', label:'Dev'}
+];
+
+document.getElementById('domains-grid').innerHTML = domains.map(function(x){
+  return '<a href="https://'+x.d+'" class="domain-item" target="_blank"><span class="domain-dot"></span>'+x.d+'<span style="margin-left:auto;font-family:var(--jb);font-size:9px;color:#666">'+x.label+'</span></a>';
+}).join('');
+
+// Sovereignty Stack
+var stack = [
+  {k:'Git', v:'Gitea', icon:'dot-live', detail:'Self-hosted on Octavia (:3100). 239 repos mirrored. Gitea Actions for CI/CD. GitHub is downstream mirror pushed via sync-downstream.'},
+  {k:'AI Inference', v:'Ollama × 4', icon:'dot-live', detail:'Running on Cecilia (16 models), Lucidia, Gematria (6 models), and Octavia. Local-first inference with no API calls to external providers.'},
+  {k:'Object Storage', v:'MinIO', icon:'dot-live', detail:'Self-hosted on Cecilia. 4 buckets, 120MB. S3-compatible API. Replaces Cloudflare R2.'},
+  {k:'DNS', v:'PowerDNS × 2', icon:'dot-live', detail:'Authoritative DNS on Lucidia + Gematria (ns1). Self-hosted alternative to Cloudflare DNS. Supports all 20 root domains.'},
+  {k:'TLS Edge', v:'Caddy', icon:'dot-live', detail:'Automatic Let\'s Encrypt certificates on Gematria. 151 domains with auto-renewal. Replaces Cloudflare proxy.'},
+  {k:'VPN', v:'WireGuard', icon:'dot-live', detail:'Full mesh VPN connecting all 7 nodes. 12/12 SSH connections verified. Internet → Gematria → WireGuard → Pi fleet.'},
+  {k:'Chat', v:'RoundTrip', icon:'dot-live', detail:'Sovereign chat platform. 109 agents, 8 channels, D1 persistence. Replaces Slack. Self-hosted on Alice:8094 with CF Worker fallback.'},
+  {k:'CI/CD', v:'Gitea Actions', icon:'dot-live', detail:'act_runner on fleet nodes. Replaces GitHub Actions for private builds. Public repos still mirror to GitHub for visibility.'},
+  {k:'Database', v:'PostgreSQL × 3', icon:'dot-live', detail:'Running on Alice, Cecilia, and Octavia. Primary data store for all applications. Replaces Cloudflare D1.'},
+  {k:'Cache', v:'Redis', icon:'dot-live', detail:'Self-hosted on Alice. Session storage, rate limiting, pub/sub. Replaces Cloudflare KV.'}
+];
+
+document.getElementById('stack-card').innerHTML = stack.map(function(s){
+  return '<div class="stack-row" onclick="var d=this.nextElementSibling;d.style.display=d.style.display===\'block\'?\'none\':\'block\'">' +
+    '<span class="stack-key"><span class="dot '+s.icon+'"></span>'+s.k+'</span><span class="stack-val">'+s.v+'</span></div>' +
+    '<div class="stack-detail">'+s.detail+'</div>';
+}).join('');
+
+// Contact
+var contact = [
+  {k:'Email', v:'alexa@blackroad.io', href:'mailto:alexa@blackroad.io'},
+  {k:'GitHub', v:'BlackRoad-OS-Inc', href:'https://github.com/BlackRoad-OS-Inc'},
+  {k:'Web', v:'blackroad.io', href:'https://blackroad.io'}
+];
+
+document.getElementById('contact-card').innerHTML = contact.map(function(c){
+  return '<a href="'+c.href+'" target="_blank" style="text-decoration:none;display:block">' +
+    '<div class="filing-row"><span class="filing-key">'+c.k+'</span><span class="filing-val">'+c.v+' →</span></div></a>';
+}).join('');
+
+// Uptime counter
+var founded = new Date('2025-11-17T00:00:00Z');
+function uptime(){
+  var diff = Date.now() - founded;
+  var d = Math.floor(diff/86400000);
+  var h = Math.floor((diff%86400000)/3600000);
+  var m = Math.floor((diff%3600000)/60000);
+  document.getElementById('uptime').textContent = d+'d '+h+'h '+m+'m';
+}
+uptime();
+setInterval(uptime,60000);
+
+// ═══ WIDGET GRID SYSTEM ═══
+var WIDGET_CATALOG = [
+  {id:'chat',name:'Chat',desc:'RoundTrip messenger',icon:'💬',href:'https://chat.blackroad.io',badge:'Live'},
+  {id:'search',name:'Search',desc:'Search everything',icon:'🔍',href:'https://search.blackroad.io',badge:'Live'},
+  {id:'pay',name:'Pay',desc:'Stripe checkout',icon:'💳',href:'https://pay.blackroad.io',badge:'Live'},
+  {id:'status',name:'Status',desc:'Fleet health',icon:'📡',href:'https://status.blackroad.io',badge:'Live'},
+  {id:'docs',name:'Docs',desc:'Documentation hub',icon:'📄',href:'https://docs.blackroad.io'},
+  {id:'github',name:'GitHub',desc:'Source code',icon:'⚡',href:'https://github.com/BlackRoad-OS-Inc'},
+  {id:'roadcoin',name:'RoadCoin',desc:'Compute credits',icon:'🪙',href:'https://roadcoin.io'},
+  {id:'roadchain',name:'RoadChain',desc:'Block explorer',icon:'⛓',href:'https://roadchain.io'},
+  {id:'ai',name:'AI',desc:'AI playground',icon:'🧠',href:'https://blackroadai.com'},
+  {id:'network',name:'Network',desc:'Mesh status',icon:'🌐',href:'https://blackroad.network'},
+  {id:'systems',name:'Systems',desc:'Fleet dashboard',icon:'🖥',href:'https://blackroad.systems'},
+  {id:'identity',name:'Identity',desc:'Profile & auth',icon:'👤',href:'https://blackroad.me'},
+  {id:'tutor',name:'Tutor',desc:'Learn & earn',icon:'📚',href:'https://tutor.blackroad.io'},
+  {id:'canvas',name:'Canvas',desc:'Creative studio',icon:'🎨',href:'https://canvas.blackroad.io'},
+  {id:'video',name:'Video',desc:'RoadView player',icon:'▶',href:'https://video.blackroad.io'},
+  {id:'radio',name:'Radio',desc:'Live audio',icon:'📻',href:'https://radio.blackroad.io'},
+  {id:'game',name:'Game',desc:'RoadWorld',icon:'🎮',href:'https://game.blackroad.io'},
+  {id:'social',name:'Social',desc:'BackRoad feed',icon:'📱',href:'https://social.blackroad.io'},
+  {id:'brand',name:'Brand',desc:'Design system',icon:'◼',href:'https://brand.blackroad.io'},
+  {id:'quantum',name:'Quantum',desc:'QI research',icon:'⚛',href:'https://blackroadquantum.com'},
+  {id:'lucidia',name:'Lucidia',desc:'AI companion',icon:'✧',href:'https://lucidia.earth'},
+  {id:'math',name:'Math',desc:'Amundson Framework',icon:'∑',href:'https://github.com/BlackRoad-OS-Inc/amundson-constant'},
+  {id:'pricing',name:'Pricing',desc:'Plans & hardware',icon:'$',href:'https://pricing.blackroad.io'},
+  {id:'hq',name:'HQ',desc:'Pixel office',icon:'🏢',href:'https://hq.blackroad.io'},
+  {id:'portal',name:'Portal',desc:'Auth portal',icon:'🚪',href:'https://portal.blackroad.io'},
+  {id:'images',name:'Images',desc:'Asset CDN',icon:'🖼',href:'https://images.blackroad.io'},
+];
+
+var STORAGE_KEY = 'br-widgets-company';
+var DEFAULT_WIDGETS = ['chat','search','pay','status','github','roadcoin','ai','network','systems','identity','docs','math'];
+
+function getActiveWidgets(){
+  try{var s=localStorage.getItem(STORAGE_KEY);if(s)return JSON.parse(s);}catch(e){}
+  return DEFAULT_WIDGETS.slice();
+}
+function saveActiveWidgets(ids){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+}
+
+var editMode = false;
+function toggleEditMode(){
+  editMode = !editMode;
+  document.getElementById('edit-btn').textContent = editMode ? 'Done' : 'Edit';
+  document.getElementById('widget-palette').classList.toggle('open', editMode);
+  document.getElementById('widget-grid').classList.toggle('widget-edit-mode', editMode);
+  renderWidgets();
+  renderPalette();
+}
+
+function renderWidgets(){
+  var ids = getActiveWidgets();
+  var grid = document.getElementById('widget-grid');
+  grid.innerHTML = ids.map(function(id,i){
+    var w = WIDGET_CATALOG.find(function(x){return x.id===id});
+    if(!w) return '';
+    return '<div class="widget" draggable="true" data-id="'+w.id+'" data-index="'+i+'"'+
+      ' ondragstart="wDragStart(event)" ondragover="wDragOver(event)" ondrop="wDrop(event)" ondragend="wDragEnd(event)">' +
+      (editMode?'<div class="widget-remove" onclick="removeWidget(\''+w.id+'\')">×</div>':'')+
+      '<div class="widget-icon'+(w.icon.length<=2?' grad':'')+'">'+w.icon+'</div>' +
+      '<div class="widget-name">'+w.name+'</div>' +
+      '<div class="widget-desc">'+w.desc+'</div>' +
+      (w.badge?'<div class="widget-badge">'+w.badge+'</div>':'') +
+      (!editMode?'<a href="'+w.href+'" target="_blank" class="widget-link"></a>':'') +
+      '</div>';
+  }).join('');
+}
+
+function renderPalette(){
+  var ids = getActiveWidgets();
+  var available = WIDGET_CATALOG.filter(function(w){return ids.indexOf(w.id)===-1});
+  var pg = document.getElementById('palette-grid');
+  if(!available.length){pg.innerHTML='<div style="font-size:11px;color:#555;padding:8px">All widgets added</div>';return;}
+  pg.innerHTML = available.map(function(w){
+    return '<div class="widget-palette-item" onclick="addWidget(\''+w.id+'\')">'+w.icon+' '+w.name+'</div>';
+  }).join('');
+}
+
+function addWidget(id){
+  var ids=getActiveWidgets();
+  if(ids.indexOf(id)===-1){ids.push(id);saveActiveWidgets(ids);}
+  renderWidgets();renderPalette();
+}
+function removeWidget(id){
+  var ids=getActiveWidgets().filter(function(x){return x!==id});
+  saveActiveWidgets(ids);renderWidgets();renderPalette();
+}
+
+// Drag and drop reorder
+var dragIdx=null;
+function wDragStart(e){dragIdx=+e.target.closest('.widget').dataset.index;e.target.closest('.widget').classList.add('dragging');}
+function wDragOver(e){e.preventDefault();e.target.closest('.widget')?.classList.add('drag-over');}
+function wDrop(e){
+  e.preventDefault();
+  document.querySelectorAll('.widget').forEach(function(x){x.classList.remove('drag-over')});
+  var target=e.target.closest('.widget');if(!target)return;
+  var toIdx=+target.dataset.index;
+  if(dragIdx===null||dragIdx===toIdx)return;
+  var ids=getActiveWidgets();
+  var moved=ids.splice(dragIdx,1)[0];
+  ids.splice(toIdx,0,moved);
+  saveActiveWidgets(ids);renderWidgets();
+}
+function wDragEnd(e){dragIdx=null;document.querySelectorAll('.widget').forEach(function(x){x.classList.remove('dragging','drag-over')});}
+
+renderWidgets();
+
+</script>
+</body>
+</html>
+<!-- v1774241289 -->
